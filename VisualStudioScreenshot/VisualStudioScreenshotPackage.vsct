@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <Extern href="stdidcmd.h"/>
+
+    <Extern href="vsshlids.h"/>
+
+    <Commands package="guidVisualStudioScreenshotPackage">
+        
+        <Groups>
+
+            <Group guid="guidVisualStudioScreenshotPackageCmdSet" id="CaptureImageMenuGroup" priority="0x0005">
+                <Parent guid="guidSHLMainMenu" id="IDM_VS_MENU_TOOLS"/>
+            </Group>
+
+            <Group guid="guidVisualStudioScreenshotPackageCmdSet" id="CaptureImageGroup" priority="0x0600">
+                <Parent guid="guidVisualStudioScreenshotPackageCmdSet" id="CaptureImageMenu"/>
+            </Group>
+        </Groups>
+
+        <Menus>
+            <Menu guid="guidVisualStudioScreenshotPackageCmdSet" id="CaptureImageMenu" priority="0x0000" type="Menu">
+                <Parent guid="guidVisualStudioScreenshotPackageCmdSet" id="CaptureImageMenuGroup"/>
+                <Strings>
+                    <ButtonText>Screenshot</ButtonText>
+                </Strings>
+            </Menu>
+        </Menus>
+
+        <Buttons>
+            
+            <Button guid="guidVisualStudioScreenshotPackageCmdSet" id="CaptureMainWindowId" priority="0x0100" type="Button">
+                <Parent guid="guidVisualStudioScreenshotPackageCmdSet" id="CaptureImageGroup" />
+                <Strings>
+                    <ButtonText>Full</ButtonText>
+                </Strings>
+            </Button>
+            
+            <Button guid="guidVisualStudioScreenshotPackageCmdSet" id="CaptureActiveWindowId" priority="0x0200" type="Button">
+                <Parent guid="guidVisualStudioScreenshotPackageCmdSet" id="CaptureImageGroup" />
+                <Strings>
+                    <ButtonText>Active Window</ButtonText>
+                </Strings>
+            </Button>
+            
+        </Buttons>
+        
+    </Commands>
+
+    <Symbols>
+        <GuidSymbol name="guidVisualStudioScreenshotPackage" value="{a512387e-6f49-44c9-afe6-bb6db4b32c05}" />
+
+        <GuidSymbol name="guidVisualStudioScreenshotPackageCmdSet" value="{f2f7beed-cbd2-40e2-956a-e533083b9dbc}">
+            <IDSymbol name="CaptureImageMenuGroup" value="0x1000" />
+            <IDSymbol name="CaptureImageMenu" value="0x2000" />
+            <IDSymbol name="CaptureImageGroup" value="0x1020" />
+            <IDSymbol name="CaptureMainWindowId" value="0x0100" />
+            <IDSymbol name="CaptureActiveWindowId" value="0x0200" />
+        </GuidSymbol>
+    </Symbols>
+</CommandTable>
