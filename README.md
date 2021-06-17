@@ -9,3 +9,5 @@ In Visual Studio Main Menu -> Tool -> Screenshot
 
 ## Visual Studio Marketplace
 
+https://marketplace.visualstudio.com/items?itemName=likollee.VisualStudioScreenshot
+
