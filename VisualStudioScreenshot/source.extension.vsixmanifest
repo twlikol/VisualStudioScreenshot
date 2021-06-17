@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="VisualStudioScreenshot.50606e5d-48eb-4614-b430-4749055fe182" Version="1.0" Language="en-US" Publisher="Likol Lee" />
-        <DisplayName>Visual Studio Screenshot</DisplayName>
-        <Description xml:space="preserve">VisualStudioScreenshot</Description>
+        <Identity Id="Screenshot.50606e5d-48eb-4614-b430-4749055fe182" Version="1.0" Language="en-US" Publisher="Likol Lee" />
+        <DisplayName>Screenshot</DisplayName>
+        <Description xml:space="preserve">Capture document window or tool window screenshot inside Visual Studio</Description>
+        <MoreInfo>https://github.com/twlikol/VisualStudioScreenshot</MoreInfo>
     </Metadata>
     <Installation>
         <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[16.0, 17.0)" />
