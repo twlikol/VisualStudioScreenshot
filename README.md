@@ -11,3 +11,10 @@ In Visual Studio Main Menu -> Tool -> Screenshot
 
 https://marketplace.visualstudio.com/items?itemName=likollee.VisualStudioScreenshot
 
+## Update history
+### Version 1.0
+- Initial version
+
+### Version 1.1
+- Fixed an issue where some tool windows could not be captured
+
