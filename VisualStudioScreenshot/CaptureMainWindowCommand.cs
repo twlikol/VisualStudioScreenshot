@@ -79,17 +79,17 @@ namespace VisualStudioScreenshot
                     return;
                 }
 
-                Rectangle boundsRectangle = default;
+                Rectangle rectangle = default;
 
-                GetWindowRect(new IntPtr(window.HWnd), ref boundsRectangle);
+                GetWindowRect(new IntPtr(window.HWnd), ref rectangle);
 
-                Size sizeRect = new Size(boundsRectangle.Width - boundsRectangle.X, boundsRectangle.Height - boundsRectangle.Y);
+                Size sizeRectangle = new Size(rectangle.Width - rectangle.X, rectangle.Height - rectangle.Y);
 
-                Bitmap bitmap = new Bitmap(sizeRect.Width, sizeRect.Height, PixelFormat.Format32bppArgb);
+                Bitmap bitmap = new Bitmap(sizeRectangle.Width, sizeRectangle.Height, PixelFormat.Format32bppArgb);
 
                 Graphics graphics = Graphics.FromImage(bitmap);
 
-                graphics.CopyFromScreen(boundsRectangle.X, boundsRectangle.Y, 0, 0, sizeRect, CopyPixelOperation.SourceCopy);
+                graphics.CopyFromScreen(rectangle.X, rectangle.Y, 0, 0, sizeRectangle, CopyPixelOperation.SourceCopy);
 
                 SaveFileDialog saveFileDialog = new SaveFileDialog
                 {
